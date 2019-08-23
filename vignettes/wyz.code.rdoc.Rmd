@@ -1,0 +1,34 @@
+---
+title: "wyz.code.rdoc"
+author: "Fabien GELINEAU"
+date: "July 2019"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{wyz.code.rdoc}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<style>
+body {
+text-align: justify}
+</style>
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r, eval = TRUE, echo = FALSE}
+pkn <- 'wyz.code.rdoc'
+```
+
+
+Package **`r pkn`** aims to generate **R documentation**(manual pages) directly from
+offensive programming instrumentation. 
+
+Read [Offensive programming book](https://neonira.github.io/offensiveProgrammingBook/) to get introduction and advanced knowledge on the topic. 
+
+
