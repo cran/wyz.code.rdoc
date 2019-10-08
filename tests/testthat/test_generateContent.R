@@ -13,4 +13,7 @@ test_that("generateContent", {
   expect_equal(z, 'x %%%% 2 == 0')
   expect_equal(a, '\\item{a_b_c}{bla bla bla x %%%% 2 == 0}')
   expect_equal(b, '\\item{a_b_c} {bla bla bla x %%%% 2 == 0}')
+
+  expect_error(generateContent('my content', 'zorg'))
+  expect_error(generateContent('my content', 'zorg', 'another content'))
 })

@@ -1,7 +1,10 @@
 import("data.table")
+import("R6")
 import('wyz.code.offensiveProgramming')
-importFrom("methods", "formalArgs", "getMethod", "is")
-importFrom("utils", "methods")
+importFrom("methods", "getMethod", "is")
+importFrom("utils", "methods", "installed.packages")
+importFrom("tidyr", "separate")
+
 export(
   rdocKeywords,
   generateContent,
@@ -11,5 +14,9 @@ export(
   generateS3MethodSignature,
   generateDocumentationContent,
   generateDocumentationFile,
-  sentensize
+  getObjectSignature,
+  sentensize,
+  WrapperObject,
+  generateWrapperObject,
+  retrievePackageFunctionNames
 )

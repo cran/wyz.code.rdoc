@@ -1,15 +1,14 @@
-library(data.table)
-library(wyz.code.offensiveProgramming)
-library(wyz.code.rdoc)
+context("generateDocumentationContent")
 
 target_folder <- tempdir()
+
 source_package <- 'wyz.code.offensiveProgramming'
 
 source_files <- c(
   'code-samples/both-defs/good/full/AdditionTCFIG1.R',
   'code-samples/no-defs/Addition.R',
-  'code-samples/fun-defs/good/partial/AdditionFIPartial.R',
-  'code-samples/tc-defs/good/partial/AdditionTCPartial.R'
+  'code-samples/frt-defs/good/partial/AdditionFIPartial.R',
+  'code-samples/tcd-defs/good/partial/AdditionTCPartial.R'
 )
 
 sapply(source_files, function(e) {
@@ -56,6 +55,7 @@ extra_method <- list(
                                'to reuse on-demand instrumented offensive programming function tests'))
   )
 )
+
 # explicit invocation for method
 em <- generateDocumentationContent(target_folder, 'method', 'addMultiDouble',
                                    object, package_name,
@@ -99,3 +99,53 @@ extra_package$content <- c('AdditionTCFIG1', 'AdditionTCFIP', 'Addition')
 ep <- generateDocumentationContent(target_folder, 'package', package_name,
                                    object, package_name, extra_package, overwrite_b_1 = TRUE)
 
+
+exp <- extra_package
+exp$content <- NULL
+
+test_that("generateDocumentationContent", {
+  expect_true(file.exists(em$filename))
+  expect_true(file.exists(ec$filename))
+  expect_true(file.exists(ep$filename))
+
+  sapply(seq_len(length(gm1)), function(k) expect_true(file.exists(gm1[[k]]$filename)))
+  sapply(seq_len(length(gm2)), function(k) expect_true(file.exists(gm2[[k]]$filename)))
+  sapply(seq_len(length(gm3)), function(k) expect_true(file.exists(gm3[[k]]$filename)))
+  sapply(seq_len(length(gm4)), function(k) expect_true(file.exists(gm4[[k]]$filename)))
+})
+
+test_that("generateDocumentationContent - coverage", {
+  # not existing target folder
+  expect_error(generateDocumentationContent(file.path(target_folder, 'xxx'), 'method', 'x',
+                                            AdditionTCPartial(), package_name,
+                                            extra_method, overwrite_b_1 = TRUE))
+
+  # not existing kind
+  expect_error(generateDocumentationContent(target_folder, 'methods', 'x',
+                                            AdditionTCPartial(), package_name,
+                                            extra_method, overwrite_b_1 = TRUE))
+
+  # no content for package - see exp variable above
+  expect_error(generateDocumentationContent(target_folder, 'package', package_name,
+                                            object, package_name, exp, overwrite_b_1 = TRUE))
+})
+
+
+# commented as it fails with unknown origin - unable to find given function???
+sumValues <- function(x_i, y_i) sum(x_i, y_i, na.rm = TRUE)
+
+gmf <- generateDocumentationContent(target_folder, 'method', 'sumValues',
+                                    NULL, package_name,
+                                    extra_method, overwrite_b_1 = TRUE)
+
+test_that("generateDocumentationContent - standalone function", {
+  expect_error(generateDocumentationContent(target_folder, 'method', NA,
+                                            NULL, package_name,
+                                            extra_method, overwrite_b_1 = TRUE))
+  # unexisting function
+  expect_error(generateDocumentationContent(target_folder, 'method', 'zorg',
+                                            NULL, package_name,
+                                            extra_method, overwrite_b_1 = TRUE))
+})
+
+#
