@@ -6,11 +6,12 @@
 producePackageLink(packageName_s_1, topicName_s_1)
 }
 \arguments{
-\item{packageName_s_1}{A single string value}
-\item{topicName_s_1}{A single string value}
+\item{packageName_s_1}{A single \emph{\code{string}} value that represents generally a package name considered
+as source for the topic}
+\item{topicName_s_1}{A single \emph{\code{string}} value that is generally a documentation topic to link to}
 }
 \value{
-A single string, containing the generated package link.
+A single \emph{\code{string}}, containing the generated package link.
 See references and examples below.
 }
 \references{
@@ -27,13 +28,6 @@ Maintainer: \packageMaintainer{wyz.code.rdoc}
 \keyword{documentation}
 \concept{documentation generation}
 \encoding{UTF-8}
-\section{Classification}{
-STRATUM \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} LAYER_3
-
-PHASING \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} BUILD
-
-INTENT  \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} PARTS_BUILDING
-}
 \examples{
 producePackageLink('tools', 'checkRd')
 #[1] "\\\\link{tools:checkRd}{tools:checkRd}"

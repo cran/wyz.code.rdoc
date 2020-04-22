@@ -8,10 +8,10 @@ Generate special markup for encoding text in \R documentation
 generateEnc(entries_l)
 }
 \arguments{
-\item{entries_l}{An unconstrained named \code{list} of \code{lists} with \code{text} and
-\code{ascii} names, holding respectively international text and \acronym{ASCII} equivalent.}
+\item{entries_l}{An unconstrained named \emph{\code{list}} of \emph{\code{list}}with \bold{\code{text}} and
+\bold{\code{ascii}} names, holding respectively international text and \acronym{ASCII} equivalent.}
 }
-\value{A \code{list} of \code{character} vector}
+\value{A \emph{\code{list}} of \emph{\code{strings}}}
 \author{
 \packageAuthor{wyz.code.rdoc}
 
@@ -20,13 +20,6 @@ Maintainer: \packageMaintainer{wyz.code.rdoc}
 \keyword{documentation}
 \concept{documentation generation}
 \encoding{UTF-8}
-\section{Classification}{
-STRATUM \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} LAYER_1
-
-PHASING \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} BUILD
-
-INTENT  \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} PARTS_BUILDING
-}
 \examples{
 generateEnc(list(list(text = 'Français', ascii = 'Francais')))
 # [[1]]

@@ -10,6 +10,21 @@ library("data.table")
 library("wyz.code.offensiveProgramming")
 library("wyz.code.rdoc", warn.conflicts = FALSE)
 
+## ----parameter_naming_pluralize, echo=TRUE, eval=TRUE-------------------------
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlag_b_3')) # wrong
+
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlags_b_3')) # right
+
+## ----parameter_naming_singular, echo=TRUE, eval=TRUE--------------------------
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlags_b_1')) # wrong
+
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlag_b_1')) # right
+
+## ----parameter_naming, echo=TRUE, eval=TRUE-----------------------------------
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlag_b')) # wrong
+
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlags_b')) # right
+
 ## ----echo=TRUE, eval=TRUE-----------------------------------------------------
 pc <- ProcessingContext(
   extraneous_l = list(
@@ -55,15 +70,15 @@ examples <- list(
   function() { divide(0L, 0L) }
 )
 
-# The glue to set generation context
+# your documentation complementary parts to consider 
+# and manual page generation context setup
 ic <- InputContext(NULL, 'divide')
 pc <- ProcessingContext(
   extraneous_l = list(
     examples = convertExamples(examples, captureOutput_b_1n = TRUE)
   )
 )
-td <- tempdir()
-gc <- GenerationContext(td, overwrite = TRUE)
+gc <- GenerationContext(tempdir(), overwrite = TRUE)
 
 # The generation of the manual page
 rv <- produceManualPage(ic, pc, gc)
@@ -111,5 +126,8 @@ e$code(co) # much more probably right
 b$code(producePackageLink('ggplot2', 'aes_string'))
 
 # link to same package
-b$codelink('generateTable')
+b$codeLink('generateTable')
+
+# link to same package with enhanced presentation
+b$enhanceCodeLink('generateTable')
 

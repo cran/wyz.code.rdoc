@@ -1,5 +1,11 @@
 context("generateMarkup")
 
+test_that("generateMarkup", {
+  expect_equal(generateMarkup(keyword_s_1 = 'R'), '\\R')
+  expect_equal(generateMarkup(keyword_s_1 = 'dots'), '\\dots')
+  expect_equal(generateMarkup(keyword_s_1 = 'ldots'), '\\ldots')
+})
+
 x <- generateMarkup(c(letters[1:6]))
 y <- generateMarkup(x, 'note')
 z <- generateMarkup(c('x %% 2 == 0'))

@@ -13,22 +13,22 @@ extractObjectOPInformation <- function(object_o_1,
   getSemanticNaming <- function() {
     c(
       if (no_method) {
-        sentensize(paste('class name compliance is', beautifier$code(vos$class_name_compliance)))
+        sentensize(paste('class name compliance is', beautifier$italicCode(vos$class_name_compliance)))
       } else {
         w <- which(names(vos$function_name_compliance) == methodName_s_1)
         if (length(w) == 0) abort('unable to find function', methodName_s_1, 'from object of class', class_name)
         generateParagraph2NL(c(
           sentensize(
-            paste('function name compliance is', beautifier$code(vos$function_name_compliance[w]))
+            paste('function name compliance is', beautifier$italicCode(vos$function_name_compliance[w]))
           ),
           sentensize(
             paste('function parameter-names compliance is',
-                  beautifier$code(vos$parameter_name_compliance[function_name == methodName_s_1]$name_compliance_check)
+                  beautifier$italicCode(vos$parameter_name_compliance[function_name == methodName_s_1]$name_compliance_check)
             )
           ),
           sentensize(
             paste('function parameter-names semantic naming compliance is',
-                  beautifier$code(vos$parameter_name_compliance[function_name == methodName_s_1]$semantic_naming_check)
+                  beautifier$italicCode(vos$parameter_name_compliance[function_name == methodName_s_1]$semantic_naming_check)
             )
           )
         )

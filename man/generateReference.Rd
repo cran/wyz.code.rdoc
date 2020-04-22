@@ -6,10 +6,10 @@
 generateReference(data_l)
 }
 \arguments{
-\item{data_l}{An unconstrained list}
+\item{data_l}{An unconstrained \emph{\code{list}}}
 }
 \value{
-A single string, containing the generated reference text. Can be appended several
+A single \emph{\code{string}}, containing the generated reference text. Can be appended several
 times to elaborate a multiple reference text.
 
 See references and examples below.
@@ -27,13 +27,6 @@ Maintainer: \packageMaintainer{wyz.code.rdoc}
 \keyword{documentation}
 \concept{documentation generation}
 \encoding{UTF-8}
-\section{Classification}{
-STRATUM \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} LAYER_1
-
-PHASING \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} BUILD
-
-INTENT  \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} PARTS_BUILDING
-}
 \examples{
 generateReference(
   list(url = 'https://neonira.github.io/offensiveProgrammingBook/',

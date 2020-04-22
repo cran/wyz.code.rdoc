@@ -6,12 +6,14 @@
 generateOptionLink(options_s_1, topicName_s_1, escapeBraces_b_1 = FALSE)
 }
 \arguments{
-\item{options_s_1}{A single string value}
-\item{topicName_s_1}{A single string value}
-\item{escapeBraces_b_1}{A single boolean value}
+\item{options_s_1}{A single \emph{\code{string}} value that is generally a package name}
+\item{topicName_s_1}{A single \emph{\code{string}} value that is the generally
+a function name}
+\item{escapeBraces_b_1}{A single \emph{\code{boolean}} value, asking to escape
+braces}
 }
 \value{
-A single string, containing one option link. See references and examples below.
+A single \emph{\code{string}}, containing one option link. See references and examples below.
 }
 \references{
 Refer to
@@ -23,18 +25,12 @@ section 2.5, to know more about using cross references in \R documentation.
 
 Maintainer: \packageMaintainer{wyz.code.rdoc}
 }
-\seealso{See package link creation using function \code{\link{producePackageLink}}.}
-\keyword{documentation}
-\concept{documentation generation}
-\encoding{UTF-8}
-\section{Classification}{
-STRATUM \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} LAYER_1
-
-PHASING \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} BUILD
-
-INTENT \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} PARTS_BUILDING
-}
 \examples{
+# Typical use case
+generateOptionLink('myPackage', 'myFunction')
+#[1] "\\\\link[myPackage]{myFunction}"
+
+# Refer to reference R documentation for following case
 generateOptionLink('=terms.object', 'terms')
 #[1] "\\\\link[=terms.object]{terms}"
 }

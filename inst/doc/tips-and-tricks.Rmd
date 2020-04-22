@@ -33,6 +33,31 @@ This use-case vignette is dedicated to some common manual page use case generati
 
 It may make sense for newcommers to read the tutorial vignette prior to read this vignette. 
 
+# Tips and tricks about R code {.tabset .tabset-fade .tabset-pills}
+
+## Parameter naming
+
+Unless you specify a length of `r citefigure('1')` or `r citefigure('1l')`, pluralize the parameter name. For example, avoid `r citeop('countryFlag_b_3')`, prefer
+`r citeop('countryFlags_b_3')`. Reason is quite simple, with the first one, you will have to correct produce documentation text as it is less likely to be correct in singular form than pluralized. When using no length specification, pluralizing that parameter name is the best practice. Understanding following examples, worth the time. 
+
+```{r parameter_naming_pluralize, echo=TRUE, eval=TRUE}
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlag_b_3')) # wrong
+
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlags_b_3')) # right
+```
+
+```{r parameter_naming_singular, echo=TRUE, eval=TRUE}
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlags_b_1')) # wrong
+
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlag_b_1')) # right
+```
+
+```{r parameter_naming, echo=TRUE, eval=TRUE}
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlag_b')) # wrong
+
+wyz.code.rdoc:::getTypeLabel(FunctionParameterName('countryFlags_b')) # right
+```
+
 # Tips and tricks about sections {.tabset .tabset-fade .tabset-pills}
 
 ## add a section
@@ -145,15 +170,15 @@ examples <- list(
   function() { divide(0L, 0L) }
 )
 
-# The glue to set generation context
+# your documentation complementary parts to consider 
+# and manual page generation context setup
 ic <- InputContext(NULL, 'divide')
 pc <- ProcessingContext(
   extraneous_l = list(
     examples = convertExamples(examples, captureOutput_b_1n = TRUE)
   )
 )
-td <- tempdir()
-gc <- GenerationContext(td, overwrite = TRUE)
+gc <- GenerationContext(tempdir(), overwrite = TRUE)
 
 # The generation of the manual page
 rv <- produceManualPage(ic, pc, gc)
@@ -252,7 +277,10 @@ and the very convenient
 b$code(producePackageLink('ggplot2', 'aes_string'))
 
 # link to same package
-b$codelink('generateTable')
+b$codeLink('generateTable')
+
+# link to same package with enhanced presentation
+b$enhanceCodeLink('generateTable')
 ```
 
 

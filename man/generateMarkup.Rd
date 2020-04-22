@@ -15,38 +15,40 @@ generateMarkup(content_s, keyword_s_1 = NA_character_,
                content3_s = NA_character_)
 }
 \arguments{
-  \item{content_s}{ the content to consider }
+  \item{content_s}{ a \emph{\code{vector}} of strings, that is the content to consider }
   \item{keyword_s_1}{ a \R documentation keyword. See
-                      \code{\link{rdocKeywords}.}}
-  \item{content2_s}{ a second content, useful with some keywords that require
+                      \emph{\bold{\code{\link{rdocKeywords}}}.}}
+  \item{content2_s}{ a \emph{\code{vector}} of strings that is a second content, useful with some keywords that require
   two members}
-  \item{inline_b_1}{ should the printed result be on a single line or not? }
-  \item{useSpace_b_1}{ when dealing with documentation keywords that requires
-  two members, some may require a space in between to work properly. This
+  \item{inline_b_1}{ a single \emph{\code{boolean}} expressing if the result should be printed on a single line or not? }
+  \item{useSpace_b_1}{ a single \emph{\code{boolean}} asking for space insertion. When dealing with documentation keywords that requires two members, some may require a space in between to work properly. This
   parameters allows you to ask for this.
 }
- \item{escapeBraces_b_1}{ when \code{TRUE}, braces characters are escaped }
- \item{content3_s}{ a third content, useful with some keywords that require
-  three members}
+ \item{escapeBraces_b_1}{ when \emph{\code{TRUE}}, braces characters are escaped }
+ \item{content3_s}{ a \emph{\code{vector}} of strings that is a third content,
+ useful with some keywords that require three members}
 }
 \details{
 Very convenient function, to customize your \R documentation output.
 
 Might be used programmatically to generate pieces or full documentation.
 
-Tested thoroughly with one, two and three contents to cover all the markups of
+Tested thoroughly with zero, one, two and three contents to cover all the markups of
 \R documentation.
 
 See examples below.
 }
 \value{
-A single string, containing one or several lines of text. Provided content is
-processed by function \code{\link{escapeContent}}.
+A single \emph{\code{string}}, containing one or several lines of text.
+Provided content is processed by function \emph{\bold{\code{\link{escapeContent}}}}.
 }
 \references{
 Refer to
 \href{https://cran.r-project.org/doc/manuals/R-exts.html}{Writing \R extensions}
 to know more about R documentation requirements.
+}
+\seealso{
+Refer to \emph{\bold{\code{\link{escapeContent}}}}.
 }
 \author{
 \packageAuthor{wyz.code.rdoc}
@@ -54,6 +56,10 @@ to know more about R documentation requirements.
 Maintainer: \packageMaintainer{wyz.code.rdoc}
 }
 \examples{
+# 0. zero content example
+print(generateMarkup(keyword = 'R'))
+# "\\\\R"
+
 # 1. one content example
 print(generateMarkup('a title', 'title'))
 # "\\\\title{a title}"

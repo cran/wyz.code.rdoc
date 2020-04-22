@@ -1,26 +1,44 @@
 ---
-title: "wyz.code.rdoc releases"
-author: "Fabien GELINEAU"
-date: "Last update 2020 January"
+title: Release notes of package wyz.code.rdoc
+author: Fabien GELINEAU
+date: 2020-04-22
 output: 
   rmarkdown::html_vignette:
-    number_sections: true
-    toc: true
+    number_sections: false
+    toc: false
     css: style.css
 vignette: >
-  %\VignetteIndexEntry{wyz.code.rdoc releases}
+  %\VignetteIndexEntry{ Release notes of package wyz.code.rdoc }
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
-
-<img src='images/rdoc-hex.png' alt='offensive programming - R documentation' style='width:30%'/>
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+source('vignette-common.R')
 ```
+
+<img src='images/rdoc-hex.png' alt='offensive programming - R documentation' style='width:30%'/>
+
+# Release 1.1.16 - April 22nd 2020
+
+1. added `r citefun('shortcuts')` function
+1. added `r citefun('getTypeLabel')` function
+1. added test for `r citefun('shortcuts')` function
+1. modified `r citefun('InputContext')` function
+1. modified `r citefun('beautify')` function
+1. modified `r citefun('extractObjectOPInformation')` function
+1. modified `r citefun('generatePublicFieldParagraph')` function
+1. modified `r citefun('generatePublicMethodParagraph')` function
+1. modified `r citefun('GenerateTable')` function
+1. added `r citefile('shortcuts.Rd')` manual page
+1. updated all documentation files
+1. upgraded and updated vignette files
+1. test, `r citefigure('20.6s')`, OK: `r citefigure('824')`
+1. R CMD check,  `r citefigure('54.6s')`, 0 errors ✓ | 0 warnings ✓ | 0 notes ✓
 
 # Release 1.1.8 - January 2020 
 

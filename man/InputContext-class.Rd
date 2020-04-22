@@ -14,71 +14,73 @@ InputContext(object_o_1,
 )
 }
 \arguments{
-\item{object_o_1}{The object to consider, or \code{NULL}}
-\item{methodName_s_1}{A single string value that is the method name to consider}
-\item{packageName_s_1}{The target package name to use}
-\item{dataFilename_s_1}{A single string that is the data file name}
+\item{object_o_1}{a single \emph{\code{object}} or \emph{\code{NULL}}}
+\item{methodName_s_1}{a single \emph{\code{string}} value that is the method name to consider}
+\item{packageName_s_1}{a single \emph{\code{string}} that is the target package name to use}
+\item{dataFilename_s_1}{a single \emph{\code{string}} that is the data file name}
 }
 \value{
-An object instance of class \code{InputContext}.
+An \emph{\code{object}} instance.
 }
 \section{Information}{
 \subsection{Environment fields}{
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{beautifier} list\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{class_kind} character\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{class_name} character\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{data_name} NULL\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{dataFilename_s_1} character\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{file_name} character\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{hack_description} logical\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{instrumentationLevel} list\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{kind} double\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{kinds} character\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{methodName_s_1} character\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{number_replacements} integer\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{object_o_1} list\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{packageName_s_1} character\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{self} environment\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{typeFactory_o_1} environment\cr
-\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \bold{use_markers} logical
+\tabular{ll}{
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{beautifier}} \tab list\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{class_kind}} \tab character\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{class_name}} \tab character\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{data_name}} \tab NULL\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{dataFilename_s_1}} \tab character\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{file_name}} \tab character\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{hack_description}} \tab logical\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{instrumentationLevel}} \tab list\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{kind}} \tab double\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{kinds}} \tab character\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{methodName_s_1}} \tab character\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{number_replacements}} \tab integer\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{object_o_1}} \tab list\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{packageName_s_1}} \tab character\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{self}} \tab environment\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{typeFactory_o_1}} \tab environment\cr
+\ifelse{latex}{\out{$\\mapsto$}}{\ifelse{html}{\out{&#x25C6;}}{\\u25c6}} \emph{\code{use_markers}} \tab logical
 }
-\subsection{Environment methods}{
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{buildMethodName}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{generateConditionalMarker}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{generateConditionalMarkerGenerator}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{getFilename}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{getKind}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{getName}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{markerGenerator}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceAlias}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceArguments}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceAuthor}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceConcept}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceCustom_section}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceDescription}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceDetails}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceDocType}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceEncoding}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceExamples}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceFormat}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceKeyword}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceName}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceNote}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceRdOpts}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceRdversion}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceReferences}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceSeealso}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceSexpr}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceSource}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceSynopsis}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceTitle}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceUsage}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{produceValue}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{retrieveStrategy}\cr
-\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \bold{setUseMarkers}
+}
+\subsection{Environment methods}{\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{buildMethodName()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{generateConditionalMarker(force_b_1 = FALSE)}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{generateConditionalMarker(Generatorforce_b_1 = FALSE)}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{getFilename()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{getKind()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{getName()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{markerGenerator()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceAlias()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceArguments()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceAuthor()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceConcept()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceCustom_section()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceDescription()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceDetails()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceDocType()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceEncoding()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceExamples()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceFormat()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceKeyword()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceName()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceNote()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceRdOpts()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceRdversion()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceReferences()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceSeealso()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceSexpr()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceSource()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceSynopsis()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceTitle()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceUsage()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{produceValue()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{retrieveStrategy()}}\cr
+\ifelse{latex}{\out{$\\rightarrow$}}{\ifelse{html}{\out{&#x25A0;}}{\\u25a0}} \emph{\code{setUseMarkers(value_b_1)}}
 }
 \subsection{offensive programming - semantic naming}{
-Class name compliance is \code{TRUE}.
+Class name compliance is \emph{\code{TRUE}}.
 }
 \subsection{offensive programming - function return types}{
 Class owns no function return type instrumentation.
@@ -93,19 +95,12 @@ Class owns no test case definitions.
 Maintainer: \packageMaintainer{wyz.code.rdoc}
 }
 \seealso{
-Class \code{\link{ProcessingContext}} class \code{\link{GenerationContext}}
-and class \code{\link{ManualPageBuilder}}.
+Class \emph{\bold{\code{\link{GenerationContext}}}} class \emph{\bold{\code{\link{ProcessingContext}}}} class
+and class \emph{\bold{\code{\link{ManualPageBuilder}}}}.
 }
 \keyword{documentation}
 \concept{documentation generation}
 \encoding{UTF-8}
-\section{Classification}{
-STRATUM \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} CORE
-
-PHASING \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} BUILD
-
-INTENT  \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}} CONTENT_GENERATION
-}
 \examples{
 ic1 <- InputContext(NULL)
 

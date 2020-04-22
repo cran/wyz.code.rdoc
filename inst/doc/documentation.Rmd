@@ -44,9 +44,9 @@ Main chapter related to [documentation generation](https://neonira.github.io/off
 
 [use cases](use-cases.html)
 
-[tips and tricks ](tips-and-tricks.html)
+[tips and tricks](tips-and-tricks.html)
 
-[releaste notes](releases.html)
+[release notes](release-notes.html)
 
 
 

@@ -260,7 +260,7 @@ InputContext <- function(object_o_1,
       fpn <- FunctionParameterName(e)
       generateMarkup(e ,'item',
                      if (fpn$isSemanticName())
-                       retrieveFactory()$getTypeDescription(fpn) else
+                       getTypeLabel(fpn) else
                          generateConditionalMarker(TRUE),
                      inline_b_1 = FALSE
       )
@@ -270,16 +270,18 @@ InputContext <- function(object_o_1,
   produceValue <- function() {
     switch(kind,
            NULL,
-           sentensize(paste('an object instance of class', beautifier$code(class_name))),
-           # ifelse(instrumentationLevel$offensive_programming,
-           #        'OP instrumentation for method ... TBD XXX',
-           #        generateConditionalMarker()),
-           # ifelse(instrumentationLevel$offensive_programming,
-           #        'OP instrumentation for function... TBD XXX',
-           #        generateConditionalMarker()),
-           generateConditionalMarker(),
-           generateConditionalMarker(),
-           NULL
+           sentensize(paste('an', beautifier$italicCode('object'), 'instance of',
+                            ifelse(is.na(class_kind), '', beautifier$italicCode(class_kind)),
+                            'class', beautifier$enhanceCodeLink(class_name))),
+    # ifelse(instrumentationLevel$offensive_programming,
+    #        'OP instrumentation for method ... TBD XXX',
+    #        generateConditionalMarker()),
+    # ifelse(instrumentationLevel$offensive_programming,
+    #        'OP instrumentation for function... TBD XXX',
+    #        generateConditionalMarker()),
+    generateConditionalMarker(),
+    generateConditionalMarker(),
+    NULL
     )
   }
 

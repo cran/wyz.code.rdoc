@@ -1,5 +1,5 @@
 generateTable <- function(content_dt, alignement_s_1 = NA_character_,
-                          numberRows_b_1 = FALSE) {
+                          numberRows_b_1 = FALSE, showHeader_b_1 = TRUE) {
   nc <- ncol(content_dt)
   if (nc == 0) abort('cannot build table without columns')
 
@@ -14,7 +14,7 @@ generateTable <- function(content_dt, alignement_s_1 = NA_character_,
 
   if (numberRows_b_1) al <- paste0('r', al)
 
-  header <- paste0(paste(colnames(content_dt), collapse = ' \\tab '), '\\cr\n')
+  header <- if (showHeader_b_1) paste0(paste(colnames(content_dt), collapse = ' \\tab '), '\\cr\n') else ''
 
   w <- sapply(seq_len(nr), function(k) {
     s <- sapply(seq_len(nc), function(j) {

@@ -5,5 +5,5 @@ generatePublicMethodParagraph <- function(object_o_1, methods_s) {
     r <- regexpr('(', s, fixed = TRUE)
     paste0(beautifier$bold(substr(s, 1, r[1] - 1)), beautifier$code(substring(s, r[1])))
   })
-  generateParagraphCR(paste(documentationSymbols()$black_square, sig))
+  paste('\\cr', generateParagraphCR(paste(documentationSymbols()$black_square, sig)))
 }

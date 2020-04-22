@@ -1,6 +1,7 @@
 generatePublicFieldParagraph <- function(object_o_1, fields_s) {
-  generateParagraphCR(
-    paste(documentationSymbols()$black_diamond, beautify()$bold(fields_s),
-          sapply(fields_s, function(e) typeof(object_o_1[[e]])))
-  )
+  dt <- data.table::data.table(
+    ' ' = documentationSymbols()$black_diamond,
+    field = beautify()$bold(fields_s),
+    type = sapply(fields_s, function(e) typeof(object_o_1[[e]])))
+  generateTable(dt, showHeader_b_1 = FALSE)
 }

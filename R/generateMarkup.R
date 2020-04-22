@@ -9,6 +9,8 @@ generateMarkup <- function(content_s, keyword_s_1 = NA_character_,
   sep <- ifelse(inline_b_1, '', '\n')
   mergeString <- function(cnt_s) paste(cnt_s, collapse = sep)
 
+  if (missing(content_s)) return(generateKeyword(keyword_s_1))
+
   v <- escapeContent(mergeString(content_s), escapeBraces_b_1)
   if (is.na(keyword_s_1)) return(v)
   double_content <- !is.na(content2_s[1])

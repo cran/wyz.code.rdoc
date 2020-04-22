@@ -10,12 +10,12 @@ Function to create easily function signature from an S3 class
 generateS3MethodSignature(methodName_s_1, className_s_1, argumentNames_s)
 }
 \arguments{
-  \item{methodName_s_1}{ the function/method name to consider }
-  \item{className_s_1}{ the class name to consider}
-  \item{argumentNames_s}{ the function/method argument names }
+  \item{methodName_s_1}{ a single \emph{\code{string}} that is the function/method name to consider }
+  \item{className_s_1}{ a single \emph{\code{string}} that is the class name to consider}
+  \item{argumentNames_s}{ a \emph{\code{vector}} of strings that are the function/method argument names }
 }
 \value{
-A single string
+A single \emph{\code{string}}.
 }
 \references{
 Refer to

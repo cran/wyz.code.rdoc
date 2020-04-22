@@ -7,12 +7,13 @@ completeManualPage(filename_s_1, processingContext_o,
                    add_b_1 = TRUE, verbosity_b_1 = FALSE)
 }
 \arguments{
-\item{filename_s_1}{A single string value}
-\item{processingContext_o}{See \code{\link{ProcessingContext}}. Only
+\item{filename_s_1}{A single \emph{\code{string}} value that is a file name}
+\item{processingContext_o}{ a single processing \emph{\code{object}}.
+See \emph{\bold{code{\link{ProcessingContext}}}}. Only
 \code{postProcessing_l} parameter is considered by this function.}
-\item{add_b_1}{add flag. When \code{TRUE} add content to existing content.
-Otherwise patch content. }
-\item{verbosity_b_1}{verbosity flag}
+\item{add_b_1}{a \emph{\code{boolean}} flag. When \emph{\code{TRUE}} add content
+to existing content. Otherwise patch content. }
+\item{verbosity_b_1}{a single \emph{\code{boolean}} flag, to set or unset verbosity}
 }
 \value{
 This function adds or patches on-demand sections of a manual page file.
@@ -30,13 +31,6 @@ Maintainer: \packageMaintainer{wyz.code.rdoc}
 \keyword{documentation}
 \concept{documentation generation}
 \encoding{UTF-8}
-\section{Classification}{
-STRATUM \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}}  LAYER_3
-
-PHASING \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}}  RUN
-
-INTENT  \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}}  CONTENT_GENERATION
-}
 \examples{
 f <- function() {}
 ic <- InputContext(NULL, 'f')

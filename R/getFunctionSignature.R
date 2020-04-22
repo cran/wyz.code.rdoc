@@ -5,9 +5,7 @@ getFunctionSignature <- function(functionName_s_1) {
   fo <- retrieveFunctionArguments(f)
   ag <- sapply(seq_len(length(fo)), function(k) {
     p <- manageSingleStrings(fo[[k]])
-    # paste0(names(fo[k]), ifelse(is.symbol(fo[[k]]), '',
-    #                             paste(' =', manageSingleStrings(fo[[k]]))))
-    paste0(names(fo[k]), if (nchar(p) > 0) paste(' =', p) else '')
+    paste0(names(fo[k]), if (length(p) == 0) '' else if (nchar(p) > 0) paste(' =', p) else '')
   }, simplify = FALSE)
 
   paste0(functionName_s_1, strParenthesis(strJoin(normalizeSpaces(ag), ', ')))

@@ -6,13 +6,13 @@
 beautify(escapeBraces_b_1 = FALSE)
 }
 \arguments{
-\item{escapeBraces_b_1}{A single boolean value, allowing to escape braces also}
+\item{escapeBraces_b_1}{A single \emph{\code{boolean}} value, allowing to escape braces also}
 }
 \value{
-A named \code{list} of \R vectorized \code{functions}. See examples below.
+A named \emph{\code{list}} of \R vectorized \emph{\code{functions}}. See examples below.
 
 Content provided to function will be processed by function
-\code{\link{generateMarkup}}.
+\emph{\bold{\code{\link{generateMarkup}}}}.
 }
 \author{
 \packageAuthor{wyz.code.rdoc}
@@ -22,13 +22,6 @@ Maintainer: \packageMaintainer{wyz.code.rdoc}
 \keyword{documentation}
 \concept{documentation generation}
 \encoding{UTF-8}
-\section{Classification}{
-STRATUM \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}}  LAYER_2
-
-PHASING \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}}  BUILD
-
-INTENT  \ifelse{latex}{\out{$\longmapsto$}}{\ifelse{html}{\out{&#x25B6;}}{\\u25b6}}  PARTS_BUILDING
-}
 \examples{
 b <- beautify()
 cat('length', length(b), '\n')

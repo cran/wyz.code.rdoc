@@ -48,5 +48,6 @@ export(
   produceManualPage,
   produceAllManualPagesFromObject,
   auditDocumentationFiles,
-  verifyDocumentationFile
+  verifyDocumentationFile,
+  shortcuts
 )
