@@ -3,7 +3,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = ""
 )
-source('vignette-common.R')
+source('common-style.R')
 
 ## ----context, eval = TRUE, echo = FALSE---------------------------------------
 library("data.table")

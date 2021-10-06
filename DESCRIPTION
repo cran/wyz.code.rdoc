@@ -1,7 +1,7 @@
 Package: wyz.code.rdoc
 Type: Package
 Title: Wizardry Code Offensive Programming R Documentation
-Version: 1.1.16
+Version: 1.1.19
 Author: Fabien Gelineau <neonira@gmail.com>
 Maintainer: Fabien Gelineau <neonira@gmail.com>
 Description: Allows to generate on-demand or by batch, any R documentation file,
@@ -18,15 +18,15 @@ Description: Allows to generate on-demand or by batch, any R documentation file,
 Encoding: UTF-8
 LazyData: true
 License: GPL-3
-Depends: R (>= 3.6)
+Depends: R (>= 4.0)
 Imports: methods, data.table (>= 1.11.8), tidyr,
-        wyz.code.offensiveProgramming (>= 1.1.17), stringr (>= 1.4.0),
+        wyz.code.offensiveProgramming (>= 1.1.22), stringr (>= 1.4.0),
         R6 (>= 2.4.0), crayon (>= 1.3.4), digest (>= 0.6.23)
-Suggests: testthat, knitr, rmarkdown, lubridate
+Suggests: testthat, knitr, rmarkdown
 RoxygenNote: 7.0.2
 VignetteBuilder: knitr
-URL: https://neonira.github.io/offensiveProgrammingBook_v1.2.2
+URL: https://neonira.github.io/offensiveProgrammingBook_v1.2.2/
 NeedsCompilation: no
-Packaged: 2020-04-22 10:45:07 UTC; fabien
+Packaged: 2021-10-06 06:25:08 UTC; fabien
 Repository: CRAN
-Date/Publication: 2020-04-22 11:00:02 UTC
+Date/Publication: 2021-10-06 07:00:02 UTC

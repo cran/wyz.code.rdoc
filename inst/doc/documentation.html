@@ -15,6 +15,70 @@
 
 <title>wyz.code.rdoc documentation</title>
 
+<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
+// v0.0.1
+// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeList = document.getElementsByClassName("sourceCode");
+  for (var i = 0; i < codeList.length; i++) {
+    var linkList = codeList[i].getElementsByTagName('a');
+    for (var j = 0; j < linkList.length; j++) {
+      if (linkList[j].innerHTML === "") {
+        linkList[j].setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+});
+</script>
+<style type="text/css">
+a.anchor-section {margin-left: 10px; visibility: hidden; color: inherit;}
+a.anchor-section::before {content: '#';}
+.hasAnchor:hover a.anchor-section {visibility: visible;}
+</style>
+<script>// Anchor sections v1.0 written by Atsushi Yasumoto on Oct 3rd, 2020.
+document.addEventListener('DOMContentLoaded', function() {
+  // Do nothing if AnchorJS is used
+  if (typeof window.anchors === 'object' && anchors.hasOwnProperty('hasAnchorJSLink')) {
+    return;
+  }
+
+  const h = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+  // Do nothing if sections are already anchored
+  if (Array.from(h).some(x => x.classList.contains('hasAnchor'))) {
+    return null;
+  }
+
+  // Use section id when pandoc runs with --section-divs
+  const section_id = function(x) {
+    return ((x.classList.contains('section') || (x.tagName === 'SECTION'))
+            ? x.id : '');
+  };
+
+  // Add anchors
+  h.forEach(function(x) {
+    const id = x.id || section_id(x.parentElement);
+    if (id === '') {
+      return null;
+    }
+    let anchor = document.createElement('a');
+    anchor.href = '#' + id;
+    anchor.classList = ['anchor-section'];
+    x.classList.add('hasAnchor');
+    x.appendChild(anchor);
+  });
+});
+</script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 
 
@@ -23,6 +87,8 @@
 <style type="text/css">body {
 font-size: 14px;
 text-align: justify;
+background: #111111;
+color: #777777;
 }
 table { width: 100%;}
 p.caption {
@@ -46,7 +112,8 @@ cite.bo { font-weight: bold; color: olive;}
 cite.bt { font-weight: bold; color: lightSalmon;}
 cite.isa { font-weight: bold; color: ForestGreen;}
 cite.isa-tb { font-weight: bold; color: MediumAquamarine;}
-cite.it { font-weight: bold; color: royalBlue;}
+cite.it { font-weight: normal; color: royalBlue;}
+cite.itb { font-weight: bold; color: royalBlue;}
 cite.ea { font-weight: bold; color: CornFlowerBlue;}
 cite.m { font-weight: normal; color: orchid;}
 cite.oc { font-weight: normal; color: CornFlowerBlue;}
@@ -62,6 +129,7 @@ cite.time { font-weight: bold; color: purple;}
 cite.figure { font-weight: bold; color: orange;}
 cite.file { font: 'Courier new'; color: #00BF00; font-weight: bold;}
 cite.folder { font: 'Courier new'; color: #00BF00; font-weight: bold; font-style: normal;}
+cite.exec { font-weight: normal; color: #8C4600;}
 
 cite.xxx { font-weight: bold; color: red;}
 cite.unsure { font-style: italic; color: darkOrange }
@@ -100,6 +168,8 @@ span.question { font-size: 1.3em; font-weight: bolder; display: block; }
 <p><style type="text/css">body {
 font-size: 14px;
 text-align: justify;
+background: #111111;
+color: #777777;
 }
 table { width: 100%;}
 p.caption {
@@ -123,7 +193,8 @@ cite.bo { font-weight: bold; color: olive;}
 cite.bt { font-weight: bold; color: lightSalmon;}
 cite.isa { font-weight: bold; color: ForestGreen;}
 cite.isa-tb { font-weight: bold; color: MediumAquamarine;}
-cite.it { font-weight: bold; color: royalBlue;}
+cite.it { font-weight: normal; color: royalBlue;}
+cite.itb { font-weight: bold; color: royalBlue;}
 cite.ea { font-weight: bold; color: CornFlowerBlue;}
 cite.m { font-weight: normal; color: orchid;}
 cite.oc { font-weight: normal; color: CornFlowerBlue;}
@@ -139,6 +210,7 @@ cite.time { font-weight: bold; color: purple;}
 cite.figure { font-weight: bold; color: orange;}
 cite.file { font: 'Courier new'; color: #00BF00; font-weight: bold;}
 cite.folder { font: 'Courier new'; color: #00BF00; font-weight: bold; font-style: normal;}
+cite.exec { font-weight: normal; color: #8C4600;}
 
 cite.xxx { font-weight: bold; color: red;}
 cite.unsure { font-style: italic; color: darkOrange }

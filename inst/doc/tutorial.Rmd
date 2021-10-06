@@ -5,7 +5,7 @@ date: "Last update 2019.08.27"
 output: 
   rmarkdown::html_vignette:
     number_sections: true
-    toc: true
+    toc: false
     css: style.css
 vignette: >
   %\VignetteIndexEntry{wyz.code.rdoc Tutorial}
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = ""
 )
-source('vignette-common.R')
+source('common-style.R')
 ```
 
 
